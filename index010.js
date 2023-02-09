@@ -2,28 +2,51 @@
  
  let itensCart = [
     {
-        titulo: 'celular',
+        titulo: 'Celular',
         imagem: './assets/celular.png',
         preco: 500,
     },
     {
-        titulo: 'capinhas',
+        titulo: 'Capinhas',
         imagem: './assets/capinhas.png',
         preco: 20,
     },
     {
-        titulo: 'fones',
+        titulo: 'Fones',
         imagem: './assets/fones.png',
         preco: 30,
     }
  ]
 
- function mountCart() {
+ function mountItens() {
     for(let i = 0; i < itensCart.length; i++) {
-      console.log(itensCart[i])
-      let card = document.createElement('div')
-      card.classList.add('card')
-      cardGroup.appendChild(card)
+      let carde = document.createElement('div')
+    carde.classList.add('card')
+      cardGroup.appendChild(carde)
+
+      let text = document.createElement('span')
+      text.innerText = itensCart[i].titulo
+      text.classList.add('titulo')
+      carde.appendChild(text)
+
+      let img = document.createElement('img')
+      img.src = itensCart[i].imagem
+      img.classList.add('imagem')
+      carde.appendChild(img)
+
+      let price = document.createElement('span')
+      price.innerText = `R$ ${itensCart[i].preco},00`
+      price.classList.add('preco')
+      carde.appendChild(price)
+
+      let btn = document.createElement('button')
+      btn.addEventListener('click', function() { 
+      addItem(itensCart[i]) // está chamando a função / addStorageItem é o nome da função
+      })
+      btn.innerText = 'Adicionar'
+      carde.appendChild(btn)    
     }
  }
- mountCart()
+ mountItens()
+ function addItem(item) { // está criando a função - o "item" é pra relacionar com o AddItem
+ } 

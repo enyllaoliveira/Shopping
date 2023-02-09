@@ -5,3 +5,44 @@
 h1 {
     text-align: center;
 }
+
+.card-group {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid #cecece;
+    padding: 30px;
+    height: 300px;
+    width: 174px;
+    border-radius: 8px;
+}
+
+.imagem {
+    height: 130px;
+    width: 180px;
+    
+}
+
+.titulo {
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.preco {
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+button {
+    border: 2px solid #cecece;
+    border-radius: 3px;
+    padding: 8px;
+    color: white;
+    background-color: rgb(43, 111, 21);
+}
