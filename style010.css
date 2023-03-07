@@ -2,14 +2,34 @@
     margin: 50px
     
 }
-h1 {
-    text-align: center;
+ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
 }
 
+ul li {
+    margin-right: 15px;
+    font-size: large;
+}
+
+a{
+    color: gray; 
+    text-decoration: none;
+}
 .card-group {
     display: flex;
     justify-content: space-between;
 }
+
+.active {
+color: green;
+}
+
+.no-active{
+color: gray;
+}
+
 .card {
     display: flex;
     flex-direction: column;

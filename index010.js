@@ -51,9 +51,13 @@
  }
  mountItens() // invocando a função 
   function addItem(item) { // está criando a função - o "item" é pra relacionar com o AddItem
-  itensFormated.push(item)
-  
-  localStorage.setItem('carrinho', JSON.stringify(itensFormated));
+  if (localStorage.getItem('carrinho')) {
+    console.log('existe')
+  } else {
+    console.log("nao-existe")
 
-} 
-
+  }
+//     itensFormated.push(item)
+//   console.log(item)
+//   localStorage.setItem('carrinho', JSON.stringify(itensFormated));
+  }
