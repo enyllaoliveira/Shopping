@@ -6,16 +6,19 @@
         titulo: 'Celular',
         imagem: './assets/celular.png',
         preco: 500,
+        quantidade: 1
     },
     {
         titulo: 'Capinhas',
         imagem: './assets/capinhas.png',
         preco: 20,
+        quantidade: 1
     },
     {
         titulo: 'Fones',
         imagem: './assets/fones.png',
         preco: 30,
+        quantidade: 1
     }
  ]
 
@@ -52,12 +55,12 @@
  mountItens() // invocando a função 
   function addItem(item) { // está criando a função - o "item" é pra relacionar com o AddItem
   if (localStorage.getItem('carrinho')) {
-    console.log('existe')
+    let acumuladorCar = JSON.parse(localStorage.getItem('carrinho'))
+    itensFormated = [...acumuladorCar, item]
+    localStorage.setItem('carrinho', JSON.stringify(itensFormated));
+    
   } else {
-    console.log("nao-existe")
-
+    itensFormated.push(item)
+    localStorage.setItem('carrinho', JSON.stringify(itensFormated));
   }
-//     itensFormated.push(item)
-//   console.log(item)
-//   localStorage.setItem('carrinho', JSON.stringify(itensFormated));
-  }
+}
