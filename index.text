@@ -1,0 +1,9 @@
+- Botão/link que redirecione para o shopping
+- Pegar a lista dos itens adicionados ao carrinho no clique do botão "adicionar"
+ na página "Shopping"
+- Mostrar a lista de itens 
+    - Cada item com sua descrição
+        - Imagem, titulo, preço
+    - Cada item com botão de excluir que retira da lista de carrinho
+    - Botão de quantidade que altera a quantidade do item no carrinho
+- Botão de finalizar compra que redireciona para os dados do comprador

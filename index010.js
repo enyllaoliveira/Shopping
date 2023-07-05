@@ -1,7 +1,7 @@
  let cardGroup = document.getElementsByClassName('card-group')[0]
  let itensFormated = []
 
- let itensCart = [
+ let products = [
     {
         id: 1,
         titulo: 'Celular',
@@ -26,28 +26,28 @@
  ]
 
  function mountItens() {
-    for(let i = 0; i < itensCart.length; i++) {
+    for(let i = 0; i < products.length; i++) {
       let carde = document.createElement('div')
       carde.classList.add('card')
      
       let text = document.createElement('span')
-      text.innerText = itensCart[i].titulo
+      text.innerText = products[i].titulo
       text.classList.add('titulo')
       carde.appendChild(text)
 
       let img = document.createElement('img')
-      img.src = itensCart[i].imagem
+      img.src = products[i].imagem
       img.classList.add('imagem')
       carde.appendChild(img)
 
       let price = document.createElement('span')
-      price.innerText = `R$ ${itensCart[i].preco},00`
+      price.innerText = `R$ ${products[i].preco},00`
       price.classList.add('preco')
       carde.appendChild(price)
 
       let btn = document.createElement('button')
       btn.addEventListener('click', function() { 
-      addItem(itensCart[i]) // está chamando a função / addItem é o nome da função
+      addItem(products[i]) // está chamando a função / addItem é o nome da função
       })
       btn.innerText = 'Adicionar'
       carde.appendChild(btn)    
