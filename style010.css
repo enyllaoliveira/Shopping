@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Belanosima&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&family=Open+Sans:wght@400;700&family=Poppins:wght@400;500&family=Righteous&family=Roboto:wght@300&family=Sarala&family=Ysabeau+SC:wght@300&display=swap');
+
 * {
     background-color: #e9e6e6;
 }
@@ -14,17 +16,20 @@ ul {
 
 ul li {
     margin-right: 15px;
-    font-size: large;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family:  'Montserrat', sans-serif;;
 }
 
 a{
-    color: gray; 
+    color: rgb(123, 122, 122); 
     text-decoration: none;
 }
+
 .card-group {
     display: flex;
     justify-content:center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .active {
@@ -32,7 +37,7 @@ color: #31493c;
 }
 
 .no-active{
-color: gray;
+color: rgb(123, 122, 122);
 }
 
 .card {
@@ -54,16 +59,19 @@ color: gray;
 }
 
 .titulo {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
-    font-weight: 900;
-    font-size: 35px;
+    font-size: 1.5rem;
+    font-weight: bold;
     background-color: white;
 }
 
 .preco {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
-    font-weight: 900;
-    font-size: 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
     background-color: white;
 }
 
@@ -73,9 +81,8 @@ button {
     padding: 12px;
     color: white;
     background-color: #31493c;
-    width: 10rem;
-    font-size: 20px;
-
+    width: 11rem;
+    font-size: 15px;
 }
 
 .item {
@@ -83,6 +90,8 @@ button {
     display: flex;
     align-items: center;
     justify-content:space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
 }
 
 .quant-group {
@@ -100,7 +109,8 @@ button {
     align-items: center;
     justify-content: center;
     width: .7rem;
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
 }
 
 .valor-quant{
@@ -122,3 +132,6 @@ button {
     cursor: pointer;
 }
 
+.total {
+
+}

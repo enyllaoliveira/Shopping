@@ -49,17 +49,24 @@ for(let i = 0; i < itens.length; i++) {
       btn2.addEventListener('click', function(){updateQuant(true,i)})  
       quant.appendChild(btn2)
 
+      let sum = (itens[i].preco * itens[i].quantidade)
+
+      let total = document.createElement('span')
+      total.classList.add('valor-total')
+      total.textContent = 'R$' + sum + ',00'
+
       let imgTrash = document.createElement('img')
         imgTrash.src = 'trash.png'
         imgTrash.classList.add('imgTrash-cart')
       imgTrash.addEventListener('click', function() {
         deleteItem(i)
-      })  
-      
+      })   
+
       div.appendChild(img) 
       div.appendChild(text) 
       div.appendChild(price)
       div.appendChild(quant)    
+      div.appendChild(total)
       div.appendChild(imgTrash) 
       itensContainer.appendChild(hr) 
       itensContainer.appendChild(div)
@@ -78,18 +85,24 @@ function deleteItem(item) {
 
 function updateQuant(isSum, item) {
   let value = Number(document.getElementsByClassName('valor-quant')[item].innerText) 
+
   if(isSum) {
     value +=1
-    document.getElementsByClassName('valor-quant')[item].innerText = value
     itens[item].quantidade +=1
+    document.getElementsByClassName('valor-quant')[item].innerText = value
+    total = (itens[item].preco * itens[item].quantidade)
+    document.getElementsByClassName('valor-total')[item].innerText = "R$ " + total + " ,00"
+
     localStorage.setItem('carrinho', JSON.stringify(itens))
   } else if(value <= 1) {
     deleteItem(item)
   }
   else {
     value -=1
-    document.getElementsByClassName('valor-quant')[item].innerText = value
     itens[item].quantidade -=1
+    document.getElementsByClassName('valor-quant')[item].innerText = value
+    total = (itens[item].preco * itens[item].quantidade)
+    document.getElementsByClassName('valor-total')[item].innerText = "R$ " + total + " ,00"
     localStorage.setItem('carrinho', JSON.stringify(itens))  }
 }
 

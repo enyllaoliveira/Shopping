@@ -45,15 +45,17 @@
       price.classList.add('preco')
       carde.appendChild(price)
 
-      let btn = document.createElement('button')
+      let btn = document.createElement('button');
       btn.addEventListener('click', function() { 
-      addItem(products[i]) // está chamando a função / addItem é o nome da função
+      addItem(products[i]); // está chamando a função / addItem é o nome da função
+      btn.innerText = "Adicionado ao carrinho"
       })
-      btn.innerText = 'Adicionar'
+      btn.innerText = 'Adicionar' 
       carde.appendChild(btn)    
-      cardGroup.appendChild(carde)
+      cardGroup.appendChild(carde) 
     }
  }
+
 
  mountItens() // invocando a função - está montando cada card e adicionando como o filho do cardGroup (linha 54)
 
