@@ -25,7 +25,7 @@ for(let i = 0; i < itens.length; i++) {
       text.classList.add('text-cart')
 
       let price = document.createElement('span')
-      price.innerText = 'R$ ' + itens[i].preco + ',00'
+      price.innerText = 'R$' + itens[i].preco + ',00'
       price.classList.add('price-cart')
 
       let quant = document.createElement('div')
@@ -91,7 +91,7 @@ function updateQuant(isSum, item) {
     itens[item].quantidade +=1
     document.getElementsByClassName('valor-quant')[item].innerText = value
     total = (itens[item].preco * itens[item].quantidade)
-    document.getElementsByClassName('valor-total')[item].innerText = "R$ " + total + " ,00"
+    document.getElementsByClassName('valor-total')[item].innerText = "R$" + total + ",00"
 
     localStorage.setItem('carrinho', JSON.stringify(itens))
   } else if(value <= 1) {
@@ -102,7 +102,7 @@ function updateQuant(isSum, item) {
     itens[item].quantidade -=1
     document.getElementsByClassName('valor-quant')[item].innerText = value
     total = (itens[item].preco * itens[item].quantidade)
-    document.getElementsByClassName('valor-total')[item].innerText = "R$ " + total + " ,00"
+    document.getElementsByClassName('valor-total')[item].innerText = "R$" + total + ",00"
     localStorage.setItem('carrinho', JSON.stringify(itens))  }
 }
 

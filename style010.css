@@ -24,6 +24,7 @@ ul li {
 a{
     color: rgb(123, 122, 122); 
     text-decoration: none;
+    margin-left: 25px;
 }
 
 .card-group {
@@ -86,7 +87,7 @@ button {
 }
 
 .item {
-    padding: 2rem 1rem;
+    padding: 2rem ;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -95,9 +96,9 @@ button {
 }
 
 .quant-group {
+    border: 1px solid #cecece;
     display: flex;
     align-items: center;
-    border: 1px solid #cecece;
 }   
 
 .btn-quant, .valor-quant {
@@ -108,22 +109,15 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: .7rem;
+    max-width: .9rem;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
-}
-
-.valor-quant{
-    width: .9rem;
+    padding: 0.8rem;
 }
 
 .btn-quant {
     background: none;
     cursor: pointer;
-}
-
-.img-cart {
-    width: 50px;
 }
 
 .imgTrash-cart {
@@ -132,6 +126,7 @@ button {
     cursor: pointer;
 }
 
-.total {
+.text-cart,.valor-total, .price-cart, .img-cart {
+    width: 6rem;
 
 }
