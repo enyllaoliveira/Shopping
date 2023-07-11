@@ -5,17 +5,16 @@
 }
 
 .container {
-    margin: 50px
-    
+   margin: 80px 100px;    
 }
+
+
 ul {
     list-style: none;
-    display: flex;
-    padding: 0;
 }
 
 ul li {
-    margin-right: 15px;
+    display: inline-block;
     font-size: 1.5rem;
     font-weight: normal;
     font-family:  'Montserrat', sans-serif;;
@@ -24,13 +23,13 @@ ul li {
 a{
     color: rgb(123, 122, 122); 
     text-decoration: none;
-    margin-left: 25px;
+    text-align: left;
+    margin-left: 10px;
 }
 
 .card-group {
     display: flex;
-    justify-content:center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .active {
@@ -42,16 +41,16 @@ color: rgb(123, 122, 122);
 }
 
 .card {
+    background-color: white;
     display: flex;
     flex-direction: column;
+    align-items:center;
     gap: 30px;
     border: 2px solid #cecece;
+    border-radius: 8px;
     padding: 30px;
     height: 400px;
     width: 350px;
-    border-radius: 8px;
-    align-items:center;
-    background-color: white;
 }
 
 .imagem {
